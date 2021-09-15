@@ -75,6 +75,7 @@ header{
     
     }
 #menu {
+    background: rgb(247, 105, 164);
     margin: 0;
     display: flex;
     list-style: none;

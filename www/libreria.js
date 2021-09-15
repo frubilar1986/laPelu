@@ -96,7 +96,7 @@ function cambiaFondoBoxTelefono() {
 function validaTodo() {
 
     var exito = true;
-    //  validacion de los input
+    //  validacion de los input en el contacto
     var campo = document.getElementById("txtNombre");
 
     if (campo.value == "" || !isNaN(campo.value)) {
