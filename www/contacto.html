@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Notable&family=Piedra&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="iconos.css">
+        <script src="libreria.js" type="text/javascript"></script>
+    </head>
+   
+
+    <body class="body_contacto">
+        <header>
+            
+            <ul id="menu" >
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="cortes_unisex.html">Cortes Unisex</a></li>
+                <li><a href="permanentes.html">Permanentes</a></li>
+                <li><a href="barberia.html">Barberia</a></li>
+                <li><a href="hidratacion.html">Hidratacion</a></li>
+                <li><a href="colorimetria.html">Colorimetria</a></li>
+                <li><a href="formacion.html">Formacion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul><br>
+            
+        </header>
+        <h1 >Contacto</h1>
+        <h3>Solicit&aacute; un turno o realiza tu consulta!!!</h3>
+        <div id="div_contacto" >
+            
+                <form action="" align="center">
+                        <!-- input nombre -->
+                        <label for="txtNombre">Nombre</label> <br>
+                        <input type="text" id="txtNombre" onchange="cambiaFondoTxtNom()"><br>
+                        <!-- input apellido -->
+                        <label for="txtApellido">Apellido</label> <br>
+                        <input type="text" id="txtApellido" onchange="cambiaFondoTxtApe()" ><br>
+                        <!-- input sexo -->
+                        <label for="sexo" id="sexo">Sexo</label> <br>
+                        <input type="radio" name="sexo"  value="F" ><label for="F">F</label><input type="radio"  name="sexo" value="M" ><label for="">M</label> <br>
+                        <!-- label titulo contactar -->
+                        <label for="" id="contact">Como desea ser contactado</label> <br> <!--titulo de contacto ->
+                        <!-- input label email -->
+                        <label for="email" id="Lmail">Email</label>
+                        <input type="checkbox" name="correo" id="email" onclick="contactar()"> 
+                        <input type="checkbox" name="telefono" id="phone" onclick="contactar()">
+                        <label for="phone" >Telefono</label><br>
+                        
+                        <!-- input text correo -->
+                        <label for="Correo electronico" id="Lcorreo">CorreoElectronico:</label><br>
+                        <input type="email" name="email" id="correo" onblur="cambiaFondoBoxCorreo()" ><br>
+                        
+                        <!-- input text telefono -->
+                        <label for="telefono" id="Ltelefono">Telefono fijo / celular:</label><br>
+                        <input type="text" name="telefono" id="telefono" onblur="cambiaFondoBoxTelefono()" ><br>
+
+                        <div id="correcto"></div>
+                        <!-- fecha de nacimiento -->
+                        <label for="fnac" id="titFnac">Ingresar Fecha Nacimiento:</label> <br>
+                        <label for=""  id="lAnio" >Ingrese a&ntilde;o:</label><label for="mes"  id="lMes" >Ingrese mes:</label>
+                        <label for=""  id="lDia" >Ingrese dia:</label> <br> <br>
+                        <input type="text" id="dia" value="00" onfocus="this.select()" onblur="validaDia()"  onselect="vDia()" >
+                        <input type="text" id="mes" value="00" onfocus="this.select()" onblur="validaMes()" onselect="vMes()" >
+                        <input type="text" id="anio" value="1900" onfocus="this.select()" onblur="validaAnio()" onselect="vLanio()"  ><br>
+                        <!-- select trabajos -->
+                        <label for="tipoTrabajo">Sobre que esta interesado/a:</label><br>
+                        <select name="trabajos" id="tipoTrabajo" onblur="cambiaFondoTxtSelect()"> <option value="seleccionar" id="select" >Seleccionar una opcion</option> <option value="cortes">Cortes unisex</option><option value="Permanentes">Permanente</option><option value="">Barberia</option><option value="">Hidratacion</option><option value="">Colorimetria</option></select>
+                        <!-- textArea -->
+                        <label for="txtArea" ></label><br>
+                        <textarea name="txtArea" id="txtComentario" onchange="cambiaFondoTxtComentario()" cols="50" rows="10">Dejanos tu comentario</textarea><br>
+                        <!-- botones -->
+                        <input type="button" id="btn_enviar" value="Enviar" onclick="enviar()"><input type="reset" value="Limpiar" onclick="limpiaBox()">
+                        
+    
+                    
+                </form>
+        </div>
+        <h2></h2>
+         <footer>
+            <p>Derechos reservados 2020 &copy; <br> Tambien podes seguirnos por las redes sociales<br> Telefono: 0800-000-666 </p>
+             <div class="ico-face"><a target="blank" href=https://www.facebook.com/Romina-Tisnado-316746712180779/?epa=SEARCH_BOX><img src="../iconos/face2.png" alt="icono de facebook"></a></div>
+             <div  class="ico-insta" ><a target="blank" href="https://www.instagram.com/lapeluderomy/"><img src="../iconos/instagram.png" alt="icono de instagram2"></a></div>
+            
+         </footer>
+         
+    </body>
+</html>
